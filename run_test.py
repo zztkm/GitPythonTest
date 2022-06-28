@@ -42,8 +42,7 @@ with TemporaryDirectory() as tmpdir:
     copy_all(output_dir, Path(tmpdir))
 
     cmd.run("git add --all")
-
-    cmd.run('git commit -m "deploy gh-pages"')
+    cmd.run('git commit -m "update"')
 
     print(os.getcwd())
     res = cmd.run(f"git push --force origin {branch}")
